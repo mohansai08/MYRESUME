@@ -11,36 +11,93 @@
       background-color: #f9f9f9;
       color: #333;
     }
+
     header {
       background-color: #8b3a00;
       color: white;
       padding: 20px;
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
     }
+
+    .header-text {
+      flex: 1;
+    }
+
+    .header-text h1, .header-text h3 {
+      margin: 5px 0;
+    }
+
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+    }
+
+    .contact-info {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
     section {
       padding: 20px;
       max-width: 800px;
       margin: auto;
     }
+
     h2 {
       color: #8b3a00;
       border-bottom: 2px solid #8b3a00;
       padding-bottom: 5px;
     }
+
     .project, .education {
       margin-bottom: 20px;
     }
+
     ul {
       list-style-type: square;
       padding-left: 20px;
+    }
+
+    .contact-info a {
+      color: white;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .profile-pic {
+        margin-top: 15px;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Sanapathi Mohan Sai Durga Prasad</h1>
-    <h3>MERN Stack Developer (Student)</h3>
+    <div class="header-text">
+      <h1>Sanapathi Mohan Sai Durga Prasad</h1>
+      <h3>MERN Stack Developer (Student)</h3>
+      <div class="contact-info">
+        <a href="https://mail.google.com/mail/u/0/#inbox">📧 sanapathimohan07@gmail.com</a>
+        <a href="https://github.com/mohansai08" target="_blank">🐱 GitHub</a>
+        <a href="https://www.linkedin.com/in/mohan-sai-0309a8293/" target="_blank">💼 LinkedIn</a>
+      </div>
+    </div>
+    <img src="photo1.jpg" alt="Profile Picture" class="profile-pic" />
   </header>
 
   <section>
